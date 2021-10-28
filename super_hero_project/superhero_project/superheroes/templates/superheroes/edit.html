@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing a Hero</title>
+</head>
+<body>
+    <h1>
+        Edit Hub
+    </h1>
+    <br>
+    <form action="{% url 'superheroes:edit' hero.id %}" method="post">
+        {% csrf_token %}
+        Name: <input type = 'text' name='name' id='name' value='{% hero.name %}'><br />
+        Alter Ego: <input type = 'text' name='alter_ego' id='alter_ego' value='{% hero.alter_ego %}'><br />
+        Primary Ability: <input type = 'text' name='primary' id ='primary' value='{% hero.primary_ability %}'> <br />
+        Secondary Ability: <input type = 'text' name='secondary' id='secondary' value='{% hero.secondary_ability %}'> <br />
+        Catch Phrase: <input type = 'text' name='catch_phrase' id='catch_phrase' value='{% hero.catch_phrase %}'> <br />
+        <input type ='submit' value='Submit Edit!'> 
+    </form>
+</body>
+</html>
