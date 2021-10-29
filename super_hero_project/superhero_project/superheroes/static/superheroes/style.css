@@ -1,0 +1,19 @@
+
+
+
+li a {
+    color: turquoise;
+}
+
+body {
+    background-color: black;
+    background-image: url(images/background.png)
+    
+}
+.text_color {
+    color: rgb(185, 185, 185)
+}
+
+.hero_title {
+    color: maroon
+}

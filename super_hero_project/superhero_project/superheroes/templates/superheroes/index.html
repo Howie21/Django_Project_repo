@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superhero Index</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'superheroes/style.css' %}">
+    <title class="text_color">Superhero Index</title>
 </head>
 <body>
-    <h1>Welcome to the Superheros Home page!</h1>
-    <a href="{% url 'superheroes:create' %}">Create A Hero Here</a>
+    <h1 class="text_color">Welcome to the Superheros Home page!</h1>
+    <a class="text_color" href="{% url 'superheroes:create' %}">Create A Hero Here</a>
     <br>
-    <ul>
+    <ul class="text_color">
         {% for hero in all_heroes %}
-        <li><h2>{{hero.name}} | Click<a href="{% url 'superheroes:detail' hero.id %}"> Here </a>for Details</h2></li>
+        <li><span><h2><h3 class='hero_title'>{{hero.name}}</h3> | Click<a href="{% url 'superheroes:detail' hero.id %}"> Here </a>for Details</h2></span></li>
         {% endfor %}
     </ul>
     
