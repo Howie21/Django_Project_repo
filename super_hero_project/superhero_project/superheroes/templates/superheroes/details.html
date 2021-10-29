@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Details Page</h1>
+    <h4>Click <a href="{% url 'superheroes:index' %}">Here</a> to Go to the Homepage</h4>
     <br>
     <h2>
         {{single_hero.name}}'s Info: <br>
@@ -16,7 +17,10 @@
         Primary Ability: {{single_hero.primary_ability}} <br>
         Secondary Ability: {{single_hero.secondary_ability}} <br>
         Catch Phrase: {{single_hero.catch_phrase}} <br>
-        
+        <br>
+        <br>
+        Click<a href="{% url 'superheroes:edit' single_hero.id %}"> Here </a>to Edit {{single_hero.name}}! <br>
+        Click <a href= "{% url 'superheroes:delete' single_hero.id %}">here</a> to Delete {{single_hero.name}}</h2>
     </h2>
 </body>
 </html>
